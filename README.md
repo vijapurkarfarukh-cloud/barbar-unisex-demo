@@ -13,7 +13,7 @@ The folder and GitHub repository name is `barbar-unisex-demo` (as approved). The
   2. Live queue — now serving, your position, estimated wait (animated sample data)
   3. WhatsApp-style reminder mock
 - Sample service menu with clearly labelled sample prices
-- Gallery of **stock photographs**, labelled as not photos of this salon
+- Gallery of real haircuts from the salon’s Google listing (“Our work”)
 - Google rating only (4.2 from 5 reviews) — no invented written testimonials
 - Address, phone and daily hours
 
@@ -34,9 +34,9 @@ Open `index.html` in a browser, or serve the folder (for example `python3 -m htt
 
 The site uses only relative paths, so it works at a Pages subpath. `.nojekyll` is included so GitHub Pages will not process the folder with Jekyll.
 
-## Replacing the gallery
+## Photographs
 
-Hero and gallery images are stock. To use real photos from the salon’s Google listing, replace the files in `assets/images/` (keep the same filenames, or update `index.html`) and compress each image to under about 250 KB.
+Hero, shopfront and gallery images are from the salon’s Google listing, compressed to under about 250 KB each.
 
 ## Built with
 
