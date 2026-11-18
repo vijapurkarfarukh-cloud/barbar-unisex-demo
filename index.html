@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Barber Unisex — Demo site | Shivane, Pune</title>
   <meta name="description" content="Client demo for The Barber Unisex, a unisex salon on NDA Road, Shivtirth Nagar, Shivane, Pune. Preview online booking, a live queue and reminders. This is a demo, not an official site, and does not take real appointments." />
-  <meta name="theme-color" content="#0b0b0b" />
+  <meta name="theme-color" content="#0a0a0a" />
   <meta name="robots" content="noindex, nofollow" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="The Barber Unisex — Shivane, Pune (Demo)" />
-  <meta property="og:description" content="A black-and-gold client demo of online booking, a live queue and WhatsApp-style reminders for The Barber Unisex in Shivane, Pune." />
+  <meta property="og:description" content="A black-and-white client demo of online booking, a live queue and reminders for The Barber Unisex in Shivane, Pune." />
   <meta property="og:image" content="assets/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Barber Unisex — Shivane, Pune (Demo)" />
@@ -25,185 +25,181 @@
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="site-header" id="header">
-    <div class="wrap nav">
-      <a class="logo" href="#top">
-        <strong>THE BARBER</strong>
-        <span>Unisex · Shivane</span>
-      </a>
-      <nav class="nav-links" id="navLinks" aria-label="Primary">
-        <a href="#demo">Demo</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Our work</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#visit">Visit</a>
-      </nav>
-      <div class="nav-cta">
-        <a class="btn btn-outline" href="tel:+918090713927">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6.5 4.5h3l1.2 3.2-1.8 1.2a13 13 0 0 0 6.2 6.2l1.2-1.8 3.2 1.2v3c0 .8-.7 1.5-1.6 1.4C9.8 18.2 5 13.2 4.1 6.1c-.1-.9.6-1.6 1.4-1.6Z"/></svg>
-          Call
-        </a>
-        <a class="btn btn-gold" href="#app">Book a slot</a>
-      </div>
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    <a class="logo" href="#top">The Barber <em>Unisex</em></a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="sideMenu" aria-expanded="false">
+      <span class="menu-btn-label">Menu</span>
+      <span class="menu-btn-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+  <aside class="side-menu" id="sideMenu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" aria-hidden="true">
+    <div class="side-menu-bar">
+      <p class="logo" id="menuTitle">The Barber <em>Unisex</em></p>
+      <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">
+        <span>Close</span>
+        <span aria-hidden="true">×</span>
       </button>
     </div>
-  </header>
+    <div class="side-menu-grid">
+      <nav class="side-menu-nav" aria-label="Primary">
+        <a href="#app"><span>01</span> Book</a>
+        <a href="#services"><span>02</span> Services</a>
+        <a href="#gallery"><span>03</span> Our work</a>
+        <a href="#visit"><span>04</span> Visit</a>
+      </nav>
+      <div class="side-menu-aside">
+        <figure>
+          <img src="assets/images/interior.jpg" width="935" height="1200" alt="Inside The Barber Unisex: chairs, mirrors and a checkered floor" />
+        </figure>
+        <p class="side-menu-meta">NDA Road, Shivane, Pune</p>
+        <p class="side-menu-meta"><a href="tel:+918090713927">+91 80907 13927</a></p>
+        <p class="side-menu-meta">Open daily, 8:30 AM – 10:00 PM</p>
+        <p class="side-menu-note">This is a client demo. It does not take real appointments.</p>
+      </div>
+    </div>
+  </aside>
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div>
-          <p class="eyebrow">Client demo · Shivane, Pune</p>
-          <h1>The Barber Unisex</h1>
-          <p class="hero-lead muted">Hair and grooming on NDA Road, Shivtirth Nagar. Open daily from 8:30 AM to 10:00 PM. This page is a preview of how online booking, a live queue and reminders could work — it does not take real appointments.</p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="#app">Book a slot</a>
-            <a class="btn btn-outline" href="https://wa.me/918090713927?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20The%20Barber%20Unisex." target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.1 4.9A9.9 9.9 0 0 0 3.2 16.4L2 22l5.8-1.2A9.9 9.9 0 0 0 19.1 4.9Zm-7.1 15.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.4.7.7-3.3-.2-.3a8.2 8.2 0 1 1 7.4 4.3Zm4.5-6.1c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1s-.7.8-.8 1c-.2.1-.3.2-.6.1a6.7 6.7 0 0 1-2-1.2 7.4 7.4 0 0 1-1.4-1.7c-.1-.3 0-.4.1-.5l.3-.4.2-.3c.1-.1.1-.2 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3a9.4 9.4 0 0 0 3.4 2.9c1.2.6 1.6.6 2.2.5.3 0 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1 0-.2-.2-.2-.4-.3Z"/></svg>
-              WhatsApp
-            </a>
-            <a class="btn btn-outline" href="tel:+918090713927">Call +91 80907 13927</a>
-            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=The+Barber+Unisex%2C+NDA+Rd%2C+Shivtirth+Nagar%2C+Dangat+Patil+Nagar%2C+Shivane%2C+Pune+411023" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11.2A7 7 0 1 0 5 9.8C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.4"/></svg>
-              Directions
-            </a>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow hero-line" style="--d:0.15s">Shivane, Pune · Client demo</p>
+          <h1>
+            <span class="hero-line" style="--d:0.25s">The Barber</span>
+            <em class="hero-line" style="--d:0.38s">Unisex</em>
+          </h1>
+          <p class="lead hero-line" style="--d:0.5s">Hair and grooming on NDA Road, Shivtirth Nagar. Open daily from 8:30 AM to 10:00 PM.</p>
+          <div class="hero-line" style="--d:0.62s">
+            <a class="btn btn-solid" href="#app">Book a slot</a>
           </div>
-          <div class="hero-meta">
+          <p class="hero-meta hero-line" style="--d:0.74s">
             <span class="chip" id="openChip"><span class="dot" aria-hidden="true"></span><span class="chip-text">8:30 AM – 10:00 PM daily</span></span>
-            <span class="chip">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-6.2 7-11.2A7 7 0 1 0 5 9.8C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.8" r="2.4"/></svg>
-              NDA Rd, Shivane · 411023
-            </span>
-            <span class="chip">4.2 on Google · 5 reviews</span>
-          </div>
+            <span>4.2 on Google · 5 reviews</span>
+          </p>
         </div>
-        <figure class="hero-visual">
+        <figure class="hero-photo">
           <img src="assets/images/hero.jpg" width="1146" height="1400" alt="Inside The Barber Unisex in Shivane: wooden counter, barber chairs, staircase and stylists at work" />
-          <div class="float-card">
-            <b>4.2</b>
-            <small>Google rating · 5 reviews</small>
-          </div>
         </figure>
       </div>
     </section>
 
-    <section class="features" id="demo">
-      <div class="wrap">
-        <p class="eyebrow">What this demo shows</p>
-        <h2>Book, see the queue, get a reminder.</h2>
-        <p class="muted">A clickable showcase for the client. Every screen uses sample data. Nothing is sent to the salon.</p>
-        <div class="f-grid">
-          <a class="f-card" href="#app" data-open-tab="book">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
-            </div>
-            <h3>Online booking</h3>
-            <p class="muted">Choose a service, a sample stylist, a time, then a confirmation screen.</p>
-          </a>
-          <a class="f-card" href="#app" data-open-tab="queue">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="8" cy="8" r="2.4"/><circle cx="16" cy="8" r="2.4"/><circle cx="12" cy="16" r="2.4"/><path d="M4.5 18.5c.8-1.8 2.3-3 3.5-3s2.7 1.2 3.5 3M12 18.5c.8-1.8 2.3-3 3.5-3s2.7 1.2 3.5 3"/></svg>
-            </div>
-            <h3>Live queue</h3>
-            <p class="muted">See who’s being served, your place in line, and an estimated wait.</p>
-          </a>
-          <a class="f-card" href="#app" data-open-tab="reminder">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 9a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
-            </div>
-            <h3>Reminders</h3>
-            <p class="muted">A WhatsApp-style message mock, so you can show how a reminder would look.</p>
-          </a>
-        </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Haircut</span><span>Beard trim &amp; shave</span><span>Hair colour</span><span>Facial</span><span>Makeup</span><span>Nail service</span><span>Hair removal</span>
+        <span>Haircut</span><span>Beard trim &amp; shave</span><span>Hair colour</span><span>Facial</span><span>Makeup</span><span>Nail service</span><span>Hair removal</span>
+      </div>
+    </div>
+
+    <section class="band band-light" id="services">
+      <div class="wrap reveal">
+        <p class="eyebrow">Sample menu</p>
+        <h2>Services</h2>
+        <p class="lead narrow">A public price list was not found, so every figure here is a sample. Please confirm with the salon by phone or WhatsApp.</p>
+        <ul class="price-list">
+          <li><span>Haircut (men)</span><span>₹249 <i>Sample</i></span></li>
+          <li><span>Haircut (women)</span><span>₹449 <i>Sample</i></span></li>
+          <li><span>Haircut (kids)</span><span>₹199 <i>Sample</i></span></li>
+          <li><span>Beard trim &amp; shave</span><span>₹149 <i>Sample</i></span></li>
+          <li><span>Hair colour</span><span>₹799 <i>Sample</i></span></li>
+          <li><span>Facial / cleanup</span><span>₹599 <i>Sample</i></span></li>
+          <li><span>Makeup</span><span>₹1,499 <i>Sample</i></span></li>
+          <li><span>Nail service</span><span>₹399 <i>Sample</i></span></li>
+          <li><span>Hair removal</span><span>₹299 <i>Sample</i></span></li>
+        </ul>
+        <a class="btn btn-solid" href="#app">Book a slot</a>
       </div>
     </section>
 
-    <section class="app" id="app">
+    <section class="band band-dark gallery-band" id="gallery">
+      <div class="wrap reveal">
+        <p class="eyebrow">Gallery</p>
+        <h2>Our work</h2>
+        <p class="lead narrow">Recent haircuts at The Barber Unisex, from the salon’s Google listing.</p>
+      </div>
+      <div class="work-strip" tabindex="0" aria-label="Haircut photographs, scroll sideways">
+        <figure>
+          <img src="assets/images/work-04.jpg" width="949" height="1200" loading="lazy" alt="Haircut at The Barber Unisex, side view" />
+        </figure>
+        <figure>
+          <img src="assets/images/work-05.jpg" width="960" height="1160" loading="lazy" alt="Textured quiff haircut at The Barber Unisex" />
+        </figure>
+        <figure>
+          <img src="assets/images/work-06.jpg" width="1054" height="1200" loading="lazy" alt="Client in a salon chair after a haircut at The Barber Unisex" />
+        </figure>
+        <figure>
+          <img src="assets/images/work-07.jpg" width="954" height="1200" loading="lazy" alt="Haircut at The Barber Unisex, back view" />
+        </figure>
+        <figure>
+          <img src="assets/images/work-08.jpg" width="1066" height="1200" loading="lazy" alt="Child’s fade haircut at The Barber Unisex" />
+        </figure>
+      </div>
+    </section>
+
+    <section class="band band-light" id="app">
       <div class="wrap app-grid">
-        <div class="app-copy">
+        <div class="app-copy reveal">
           <p class="eyebrow">App preview</p>
-          <h2>Try it on the phone.</h2>
-          <p class="lead muted">Tap through the booking flow, watch a sample queue, and open a reminder thread. This is front-end only — a friendly confirmation appears, and no details leave this page.</p>
-          <ul class="app-points">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
-              Service, then stylist, then a time slot, then confirmation.
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
-              Live queue with now serving, your position, and estimated wait.
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
-              Stylist names and prices are samples, labelled as such.
-            </li>
-          </ul>
-          <p class="note">To book a real visit, call or WhatsApp <a class="plain" href="tel:+918090713927" style="color:var(--gold-2);text-decoration:none">+91 80907 13927</a>.</p>
+          <h2>Book, wait, get a reminder.</h2>
+          <p class="lead">A clickable preview for the client. Choose a service, watch a sample queue, or open a reminder. Nothing is sent to the salon.</p>
+          <p class="note">To book a real visit, call or WhatsApp <a class="nowrap" href="tel:+918090713927">+91 80907 13927</a>.</p>
         </div>
 
-        <div class="phone-wrap">
+        <div class="phone-wrap reveal">
           <div class="phone" aria-label="Interactive app demo for The Barber Unisex">
             <div class="phone-screen">
-              <div class="phone-status" aria-hidden="true"><span>9:41</span><span>LTE  ●●●</span></div>
+              <div class="phone-status" aria-hidden="true"><span>9:41</span><span>LTE</span></div>
               <div class="phone-brand">
                 <strong>The Barber Unisex</strong>
-                <small>Shivane · Demo app</small>
+                <small>Shivane · Demo</small>
               </div>
               <div class="phone-body">
                 <div id="tab-book" class="tab-panel" role="tabpanel">
                   <div class="wizard">
                     <div class="steps" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
-                    <p class="sub" id="wizardHint">All prices and stylists are samples for this demo.</p>
+                    <p class="sub" id="wizardHint">Prices and stylists are samples.</p>
 
                     <div class="wizard-step" data-step="1">
                       <h3>Choose a service</h3>
-                      <p class="sub">Sample prices — not a real menu.</p>
                       <div class="choice-list" id="serviceList"></div>
                       <div class="wizard-nav">
-                        <button class="btn btn-gold" type="button" id="toStylist">Next · Stylist</button>
+                        <button class="btn btn-solid" type="button" id="toStylist">Next</button>
                       </div>
                     </div>
 
                     <div class="wizard-step" data-step="2" hidden>
                       <h3>Choose a stylist</h3>
-                      <p class="sub">Sample names only — not the salon’s staff list.</p>
+                      <p class="sub">Sample names — not the salon’s staff list.</p>
                       <div class="choice-list" id="stylistList"></div>
                       <div class="wizard-nav">
-                        <button class="btn btn-outline" type="button" id="backService">Back</button>
-                        <button class="btn btn-gold" type="button" id="toSlot">Next · Time</button>
+                        <button class="btn btn-text" type="button" id="backService">Back</button>
+                        <button class="btn btn-solid" type="button" id="toSlot">Next</button>
                       </div>
                     </div>
 
                     <div class="wizard-step" data-step="3" hidden>
                       <h3>Pick a time</h3>
-                      <p class="sub">Sample slots, open 8:30 AM – 10:00 PM.</p>
+                      <p class="sub">Sample slots, 8:30 AM – 10:00 PM.</p>
                       <div class="date-row">
                         <label for="dateInput">Date</label>
                         <input type="date" id="dateInput" name="date" required />
                       </div>
                       <div class="slots" id="slots" role="group" aria-label="Sample time slots"></div>
                       <div class="wizard-nav">
-                        <button class="btn btn-outline" type="button" id="backStylist">Back</button>
-                        <button class="btn btn-gold" type="button" id="toConfirm">Confirm (demo)</button>
+                        <button class="btn btn-text" type="button" id="backStylist">Back</button>
+                        <button class="btn btn-solid" type="button" id="toConfirm">Confirm (demo)</button>
                       </div>
                     </div>
 
                     <div class="wizard-step" data-step="4" hidden>
                       <div class="confirm">
-                        <div class="check" aria-hidden="true">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 5 5L20 7"/></svg>
-                        </div>
+                        <p class="confirm-mark" aria-hidden="true">✓</p>
                         <h3>You’re booked — in this demo</h3>
-                        <p class="sub">Nothing was sent to the salon. Use the number below to book for real.</p>
+                        <p class="sub">Nothing was sent to the salon.</p>
                         <dl id="confirmRows"></dl>
                         <div class="wizard-nav">
-                          <button class="btn btn-outline" type="button" id="seeReminder">See a reminder</button>
-                          <button class="btn btn-gold" type="button" id="resetWizard">Book another</button>
-                        </div>
-                        <div class="wizard-nav">
-                          <a class="btn btn-outline" href="tel:+918090713927">Call</a>
-                          <a class="btn btn-outline" href="https://wa.me/918090713927" target="_blank" rel="noopener">WhatsApp</a>
+                          <button class="btn btn-text" type="button" id="seeReminder">See a reminder</button>
+                          <button class="btn btn-solid" type="button" id="resetWizard">Book another</button>
                         </div>
                       </div>
                     </div>
@@ -211,48 +207,43 @@
                 </div>
 
                 <div id="tab-queue" class="tab-panel" role="tabpanel" hidden>
-                  <h3 class="serif" style="color:var(--gold-2);font-size:1.25rem;margin-bottom:4px;">Live queue</h3>
-                  <p class="sub">Sample queue only — not the real wait at the salon.</p>
+                  <h3>Live queue</h3>
+                  <p class="sub">Sample queue only — not the real wait.</p>
                   <div class="queue-hero">
-                    <div class="q-stat now">
+                    <div>
                       <div class="label">Now serving</div>
                       <div class="num" id="qServing">#14</div>
                     </div>
-                    <div class="q-stat">
+                    <div>
                       <div class="label">Your token</div>
                       <div class="num" id="qYou">#16</div>
                     </div>
-                    <div class="q-wait">
-                      <span>Your position<strong id="qAhead">2 ahead</strong></span>
-                      <span>Est. wait<strong id="qWait">About 36 min</strong></span>
-                    </div>
                   </div>
-                  <div class="bar" aria-hidden="true"><i></i></div>
+                  <p class="q-wait"><span id="qAhead">2 ahead</span> · <span id="qWait">About 36 min</span></p>
                   <div class="q-list" id="qList"></div>
                   <div class="wizard-nav">
-                    <button class="btn btn-outline" type="button" id="qNext">Demo: next guest</button>
-                    <button class="btn btn-gold" type="button" data-open-tab="reminder">Reminder</button>
+                    <button class="btn btn-solid" type="button" id="qNext">Demo: next guest</button>
                   </div>
                 </div>
 
                 <div id="tab-reminder" class="tab-panel" role="tabpanel" hidden>
-                  <h3 class="serif" style="color:var(--gold-2);font-size:1.25rem;margin-bottom:4px;">Reminder</h3>
-                  <p class="sub">A WhatsApp-style mock. No message is sent.</p>
-                  <div class="wa" aria-label="Sample WhatsApp reminder">
-                    <div class="wa-head">
-                      <div class="wa-avatar" aria-hidden="true">B</div>
+                  <h3>Reminder</h3>
+                  <p class="sub">A chat-style mock. No message is sent.</p>
+                  <div class="chat" aria-label="Sample reminder message">
+                    <div class="chat-head">
+                      <div class="chat-avatar" aria-hidden="true">B</div>
                       <div>
                         <strong>The Barber Unisex</strong>
                         <small>Sample chat · Demo only</small>
                       </div>
                     </div>
-                    <div class="wa-thread">
+                    <div class="chat-thread">
                       <div class="bubble in">
                         Hi, this is a sample reminder from The Barber Unisex.
                         <time>Yesterday</time>
                       </div>
                       <div class="bubble in">
-                        Your demo slot is tomorrow at 6:00 PM for a Haircut (sample price ₹249). Reply 1 to confirm, or call us on +91 80907 13927.
+                        Your demo slot is tomorrow at 6:00 PM for a Haircut (sample price ₹249). Reply 1 to confirm, or call +91 80907 13927.
                         <time>Yesterday</time>
                       </div>
                       <div class="bubble out">
@@ -260,27 +251,17 @@
                         <time>Now</time>
                       </div>
                     </div>
-                    <div class="wa-actions">
-                      <button class="btn btn-gold" type="button" data-open-tab="book">Book again (demo)</button>
-                      <a class="btn btn-outline" href="https://wa.me/918090713927?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20The%20Barber%20Unisex." target="_blank" rel="noopener">Real WhatsApp</a>
-                    </div>
+                  </div>
+                  <div class="wizard-nav">
+                    <button class="btn btn-solid" type="button" data-open-tab="book">Book again (demo)</button>
                   </div>
                 </div>
               </div>
 
               <div class="phone-tabs" role="tablist" aria-label="Demo screens">
-                <button type="button" role="tab" data-tab="book" aria-selected="true" aria-controls="tab-book">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
-                  Book
-                </button>
-                <button type="button" role="tab" data-tab="queue" aria-selected="false" aria-controls="tab-queue">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="8" cy="8" r="2.2"/><circle cx="16" cy="8" r="2.2"/><circle cx="12" cy="16" r="2.2"/></svg>
-                  Queue
-                </button>
-                <button type="button" role="tab" data-tab="reminder" aria-selected="false" aria-controls="tab-reminder">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 7 3 7 3 9H3c0-2 3-2 3-9Z"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
-                  Reminder
-                </button>
+                <button type="button" role="tab" data-tab="book" aria-selected="true" aria-controls="tab-book">Book</button>
+                <button type="button" role="tab" data-tab="queue" aria-selected="false" aria-controls="tab-queue">Queue</button>
+                <button type="button" role="tab" data-tab="reminder" aria-selected="false" aria-controls="tab-reminder">Reminder</button>
               </div>
             </div>
           </div>
@@ -288,156 +269,69 @@
       </div>
     </section>
 
-    <section id="services">
-      <div class="wrap">
-        <p class="eyebrow">Services</p>
-        <h2>A sample menu</h2>
-        <p class="muted">A public price list was not found, so every figure below is a sample for this demo. Please confirm with the salon by phone or WhatsApp.</p>
-        <div class="s-grid">
-          <article class="s-card">
-            <p class="eyebrow">Hair</p>
-            <h3>Cuts and grooming</h3>
-            <ul>
-              <li><span>Haircut (men)</span><span>₹249 <span class="sample-tag">Sample</span></span></li>
-              <li><span>Haircut (women)</span><span>₹449 <span class="sample-tag">Sample</span></span></li>
-              <li><span>Haircut (kids)</span><span>₹199 <span class="sample-tag">Sample</span></span></li>
-              <li><span>Beard trim &amp; shave</span><span>₹149 <span class="sample-tag">Sample</span></span></li>
-              <li><span>Hair colour</span><span>₹799 <span class="sample-tag">Sample</span></span></li>
-            </ul>
-          </article>
-          <article class="s-card">
-            <p class="eyebrow">Skin</p>
-            <h3>Cleanup and makeup</h3>
-            <ul>
-              <li><span>Facial / cleanup</span><span>₹599 <span class="sample-tag">Sample</span></span></li>
-              <li><span>Makeup</span><span>₹1,499 <span class="sample-tag">Sample</span></span></li>
-            </ul>
-          </article>
-          <article class="s-card">
-            <p class="eyebrow">More</p>
-            <h3>Nails and hair removal</h3>
-            <ul>
-              <li><span>Nail service</span><span>₹399 <span class="sample-tag">Sample</span></span></li>
-              <li><span>Hair removal</span><span>₹299 <span class="sample-tag">Sample</span></span></li>
-            </ul>
-          </article>
+    <section class="band band-dark" id="visit">
+      <div class="wrap visit-grid">
+        <div class="reveal">
+          <p class="eyebrow">Visit</p>
+          <h2>Shivane, Pune</h2>
+          <dl class="facts">
+            <div>
+              <dt>Address</dt>
+              <dd>NDA Rd, Shivtirth Nagar, Dangat Patil Nagar, Shivane, Pune 411023</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd><a href="tel:+918090713927">+91 80907 13927</a></dd>
+            </div>
+            <div>
+              <dt>WhatsApp</dt>
+              <dd><a href="https://wa.me/918090713927" target="_blank" rel="noopener">Message this number</a></dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <dd>Open daily, 8:30 AM – 10:00 PM.<br />Hours may differ on some holidays.</dd>
+            </div>
+            <div>
+              <dt>Rating</dt>
+              <dd>4.2 on Google, from 5 reviews. <a href="https://www.google.com/maps/search/?api=1&amp;query=The+Barber+Unisex%2C+NDA+Rd%2C+Shivtirth+Nagar%2C+Dangat+Patil+Nagar%2C+Shivane%2C+Pune+411023" target="_blank" rel="noopener">See reviews on Google</a>.</dd>
+            </div>
+          </dl>
+          <a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=The+Barber+Unisex%2C+NDA+Rd%2C+Shivtirth+Nagar%2C+Dangat+Patil+Nagar%2C+Shivane%2C+Pune+411023" target="_blank" rel="noopener">Directions</a>
         </div>
-        <p class="note" style="margin-top:20px">Sample prices for this demo only — not a real menu.</p>
-      </div>
-    </section>
-
-    <section id="gallery">
-      <div class="wrap">
-        <p class="eyebrow">Gallery</p>
-        <h2>Our work</h2>
-        <p class="muted">Recent haircuts at The Barber Unisex, from the salon’s Google listing.</p>
-        <div class="g-grid">
-          <figure>
-            <img src="assets/images/work-04.jpg" width="949" height="1200" loading="lazy" alt="Haircut at The Barber Unisex, side view" />
-          </figure>
-          <figure>
-            <img src="assets/images/work-05.jpg" width="960" height="1160" loading="lazy" alt="Textured quiff haircut at The Barber Unisex" />
-          </figure>
-          <figure>
-            <img src="assets/images/work-06.jpg" width="1054" height="1200" loading="lazy" alt="Client in a salon chair after a haircut at The Barber Unisex" />
-          </figure>
-          <figure>
-            <img src="assets/images/work-07.jpg" width="954" height="1200" loading="lazy" alt="Haircut at The Barber Unisex, back view" />
-          </figure>
-          <figure>
-            <img src="assets/images/work-08.jpg" width="1066" height="1200" loading="lazy" alt="Child’s fade haircut at The Barber Unisex" />
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="reviews">
-      <div class="wrap">
-        <p class="eyebrow">Reviews</p>
-        <h2>What Google shows</h2>
-        <div class="rating-row">
-          <div class="rating-num">4.2</div>
-          <div>
-            <div class="stars" aria-label="4.2 out of 5">★★★★☆</div>
-            <p class="muted">Based on 5 Google reviews.</p>
-          </div>
-        </div>
-        <p class="note">No written reviews are quoted here. Read them on <a class="plain" href="https://www.google.com/maps/search/?api=1&amp;query=The+Barber+Unisex%2C+NDA+Rd%2C+Shivtirth+Nagar%2C+Dangat+Patil+Nagar%2C+Shivane%2C+Pune+411023" style="color:var(--gold-2);white-space:nowrap" target="_blank" rel="noopener">Google Maps</a>.</p>
-      </div>
-    </section>
-
-    <section id="visit">
-      <div class="wrap">
-        <p class="eyebrow">Visit</p>
-        <h2>Find us in Shivane</h2>
-        <div class="visit-grid">
-          <div class="info-card">
-            <p class="eyebrow">Location</p>
-            <h3>Address</h3>
-            <p>NDA Rd, Shivtirth Nagar, Dangat Patil Nagar, Shivane, Pune, Maharashtra 411023</p>
-            <h3>Phone</h3>
-            <p><a class="plain" href="tel:+918090713927">+91 80907 13927</a></p>
-            <p><a class="plain" href="https://wa.me/918090713927" target="_blank" rel="noopener">WhatsApp this number</a></p>
-            <h3>Hours</h3>
-            <table class="hours">
-              <tbody>
-                <tr><td>Monday</td><td>8:30 AM – 10:00 PM</td></tr>
-                <tr><td>Tuesday</td><td>8:30 AM – 10:00 PM</td></tr>
-                <tr><td>Wednesday</td><td>8:30 AM – 10:00 PM</td></tr>
-                <tr><td>Thursday</td><td>8:30 AM – 10:00 PM</td></tr>
-                <tr><td>Friday</td><td>8:30 AM – 10:00 PM</td></tr>
-                <tr><td>Saturday</td><td>8:30 AM – 10:00 PM</td></tr>
-                <tr><td>Sunday</td><td>8:30 AM – 10:00 PM</td></tr>
-              </tbody>
-            </table>
-            <p class="muted" style="margin-top:12px">Hours and address as listed for the salon. Hours may differ on some holidays.</p>
-          </div>
-          <div class="map-wrap visit-photos">
-            <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=The+Barber+Unisex%2C+NDA+Rd%2C+Shivtirth+Nagar%2C+Dangat+Patil+Nagar%2C+Shivane%2C+Pune+411023" target="_blank" rel="noopener">
-              <img src="assets/images/exterior.jpg" width="1120" height="1400" loading="lazy" alt="The Barber Unisex shopfront on NDA Road, Shivane, with a BAR·BER Unisex Salon sign. Opens Google Maps." />
-              <span class="map-open">Open in Google Maps</span>
-            </a>
-            <figure class="inside-shot">
-              <img src="assets/images/interior.jpg" width="935" height="1200" loading="lazy" alt="Inside The Barber Unisex: chairs, mirrors and a checkered floor" />
-            </figure>
-          </div>
-        </div>
+        <a class="visit-photo reveal" href="https://www.google.com/maps/search/?api=1&amp;query=The+Barber+Unisex%2C+NDA+Rd%2C+Shivtirth+Nagar%2C+Dangat+Patil+Nagar%2C+Shivane%2C+Pune+411023" target="_blank" rel="noopener">
+          <img src="assets/images/exterior.jpg" width="1120" height="1400" loading="lazy" alt="The Barber Unisex shopfront on NDA Road, Shivane, with a BAR·BER Unisex Salon sign. Opens Google Maps." />
+          <span>Open in Google Maps</span>
+        </a>
       </div>
     </section>
   </main>
 
-  <footer class="site">
+  <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
-        <div class="demo-banner">Demo website</div>
-        <p><strong>This is a demo site</strong> — it is not the official website of The Barber Unisex and is not affiliated with or approved by the salon. The booking flow, live queue and reminders are front-end samples only and do not send data.</p>
-        <p style="margin-top:12px">Listing facts used here: name, address, phone, daily hours (8:30 AM–10:00 PM), and a 4.2 Google rating from 5 reviews. Service items and prices are placeholders. Photographs are from the salon’s Google listing.</p>
+        <p class="logo">The Barber <em>Unisex</em></p>
+        <p>This is a demo site — it is not the official website of The Barber Unisex and is not affiliated with or approved by the salon. The booking flow, live queue and reminders are front-end samples only and do not send data.</p>
+        <p class="foot-note">Facts used: name, address, phone, daily hours (8:30 AM–10:00 PM), and a 4.2 Google rating from 5 reviews. Service items and prices are placeholders. Photographs are from the salon’s Google listing.</p>
       </div>
+      <nav aria-label="On this page">
+        <p class="eyebrow">On this page</p>
+        <ul>
+          <li><a href="#app">Book</a></li>
+          <li><a href="#services">Sample services</a></li>
+          <li><a href="#gallery">Our work</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
       <div>
-        <h3 class="serif" style="color:var(--gold-2);font-size:1.1rem;margin-bottom:10px;">Visit</h3>
-        <ul class="foot-links">
-          <li>NDA Rd, Shivtirth Nagar, Dangat Patil Nagar, Shivane, Pune 411023</li>
+        <p class="eyebrow">Contact</p>
+        <ul>
+          <li>NDA Rd, Shivtirth Nagar, Shivane, Pune 411023</li>
           <li><a href="tel:+918090713927">+91 80907 13927</a></li>
           <li><a href="https://wa.me/918090713927" target="_blank" rel="noopener">WhatsApp</a></li>
         </ul>
       </div>
-      <div>
-        <h3 class="serif" style="color:var(--gold-2);font-size:1.1rem;margin-bottom:10px;">On this page</h3>
-        <ul class="foot-links">
-          <li><a href="#app">App demo</a></li>
-          <li><a href="#services">Sample services</a></li>
-          <li><a href="#gallery">Our work</a></li>
-          <li><a href="#visit">Hours &amp; location</a></li>
-        </ul>
-      </div>
     </div>
   </footer>
-
-  <div class="mobile-cta" aria-label="Quick actions">
-    <a class="btn btn-outline" href="tel:+918090713927">Call</a>
-    <a class="btn btn-outline" href="https://wa.me/918090713927?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20The%20Barber%20Unisex." target="_blank" rel="noopener">WhatsApp</a>
-    <a class="btn btn-gold" href="#app">Book</a>
-  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

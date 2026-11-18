@@ -4,26 +4,87 @@
   const $ = (sel, root) => (root || document).querySelector(sel);
   const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
 
-  /* Header shadow on scroll */
-  const header = $(".site-header");
-  const onScroll = () => header && header.classList.toggle("scrolled", window.scrollY > 8);
+  /* Header: shadow / contrast once we leave the dark hero */
+  const header = $("#header");
+  const hero = $(".hero");
+  const onScroll = () => {
+    if (!header) return;
+    const past = window.scrollY > 8;
+    header.classList.toggle("scrolled", past);
+    if (hero) {
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      header.classList.toggle("on-light", heroBottom <= header.offsetHeight);
+    }
+  };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  /* Mobile menu */
+  /* Slide-in side menu */
   const menuBtn = $("#menuBtn");
-  const navLinks = $("#navLinks");
-  if (menuBtn && navLinks) {
-    const setOpen = (open) => {
-      navLinks.classList.toggle("open", open);
+  const sideMenu = $("#sideMenu");
+  const overlay = $("#menuOverlay");
+  const menuClose = $("#menuClose");
+  const focusableSel = "a[href], button:not([disabled])";
+
+  function setMenu(open) {
+    document.body.classList.toggle("menu-open", open);
+    if (sideMenu) sideMenu.setAttribute("aria-hidden", String(!open));
+    if (overlay) overlay.hidden = !open;
+    if (menuBtn) {
       menuBtn.setAttribute("aria-expanded", String(open));
       menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
-    };
-    menuBtn.addEventListener("click", () => setOpen(!navLinks.classList.contains("open")));
-    navLinks.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") setOpen(false);
+    }
+    if (open && menuByKey && menuClose) menuClose.focus();
+    else if (!open && menuByKey && menuBtn) menuBtn.focus();
+    if (!open) menuByKey = false;
+  }
+
+  let menuByKey = false;
+  if (menuBtn && sideMenu) {
+    menuBtn.addEventListener("click", (e) => {
+      menuByKey = e.detail === 0;
+      setMenu(!document.body.classList.contains("menu-open"));
     });
+    if (menuClose) menuClose.addEventListener("click", () => setMenu(false));
+    if (overlay) overlay.addEventListener("click", () => setMenu(false));
+    sideMenu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        setMenu(false);
+        return;
+      }
+      if (e.key !== "Tab" || !document.body.classList.contains("menu-open")) return;
+      const items = $$(focusableSel, sideMenu);
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+  }
+
+  /* Subtle scroll reveal */
+  const revealEls = $$(".reveal");
+  if (revealEls.length && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    );
+    revealEls.forEach((el) => io.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add("in"));
   }
 
   /* Open / closed in Asia/Kolkata */
@@ -79,14 +140,7 @@
     btn.addEventListener("click", () => showTab(btn.getAttribute("data-tab")));
   });
   $$("[data-open-tab]").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const name = btn.getAttribute("data-open-tab");
-      showTab(name);
-      const app = $("#app");
-      if (app && e.currentTarget.tagName === "A") {
-        /* let hash scroll run */
-      }
-    });
+    btn.addEventListener("click", () => showTab(btn.getAttribute("data-open-tab")));
   });
 
   /* Booking wizard — all front-end, nothing is sent */
@@ -178,11 +232,10 @@
     stepBars.forEach((bar, i) => bar.classList.toggle("on", i < n));
   }
 
-  function flash(msg, root) {
-    const p = root || $("#wizardHint");
+  function flash(msg) {
+    const p = $("#wizardHint");
     if (!p) return;
-    p.textContent = msg;
-    p.style.color = "var(--gold-2)";
+    p.textContent = msg || "Prices and stylists are samples.";
   }
 
   $("#toStylist") &&
@@ -226,6 +279,7 @@
       renderChoices(serviceList, SERVICES, "service", (s) => s.name, (s) => s.price);
       renderChoices(stylistList, STYLISTS, "stylist", (s) => s.name, () => "");
       $$(".slot", slotsEl).forEach((s) => s.setAttribute("aria-pressed", "false"));
+      flash("");
       goStep(1);
     });
   $("#seeReminder") &&
@@ -243,12 +297,6 @@
 
   /* Live queue — fake, animated */
   const queueState = { serving: 14, you: 16 };
-  const names = [
-    { n: 14, label: "Guest (sample)", svc: "Haircut", st: "In the chair" },
-    { n: 15, label: "Guest (sample)", svc: "Beard trim", st: "Next" },
-    { n: 16, label: "You (demo)", svc: "Haircut", st: "Your place" },
-    { n: 17, label: "Guest (sample)", svc: "Hair colour", st: "Waiting" },
-  ];
 
   function renderQueue() {
     const servingEl = $("#qServing");
@@ -297,6 +345,4 @@
       }
       renderQueue();
     });
-
-  /* Reminder demo buttons already hook to tabs / tel / wa via HTML */
 })();

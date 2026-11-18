@@ -6,14 +6,16 @@ The folder and GitHub repository name is `barbar-unisex-demo` (as approved). The
 
 ## What’s on the page
 
-- Black and gold premium design (near-black backgrounds, gold headings and buttons). No pink.
-- Hero with Call, Book, WhatsApp and Directions.
+- Black and white editorial design (near-black and off-white sections, no gold, no pink).
+- A slide-in side menu with large type, and a side-by-side layout on wider screens.
+- A split hero (copy on one side, a full-height photograph on the other) and one primary button.
+- A moving strip of service names, a typographic sample menu, and a horizontal “Our work” photo strip.
 - Clickable phone mock-up:
   1. Booking flow — service → stylist → time slot → confirmation
-  2. Live queue — now serving, your position, estimated wait (animated sample data)
-  3. WhatsApp-style reminder mock
-- Sample service menu with clearly labelled sample prices
-- Gallery of real haircuts from the salon’s Google listing (“Our work”)
+  2. Live queue — now serving, your position, estimated wait (sample data)
+  3. Chat-style reminder mock
+- Sample service prices, each labelled as a sample
+- Real haircuts from the salon’s Google listing
 - Google rating only (4.2 from 5 reviews) — no invented written testimonials
 - Address, phone and daily hours
 
